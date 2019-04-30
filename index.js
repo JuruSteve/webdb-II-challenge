@@ -119,7 +119,7 @@ server.post('/api/bears', async (req, res) => {
 server.put('/api/bears/:id', async (req, res) => {
   const newBear = req.body
   if (!newBear.name || newBear.name === '') {
-    res.status(400).json({ errorMessage: 'Please provide a name to add a zoo.' })
+    res.status(400).json({ errorMessage: 'Please provide a name to update a zoo.' })
   } else {
     try {
       const id = req.params.id
